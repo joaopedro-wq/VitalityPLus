@@ -1,0 +1,81 @@
+.blog {
+    background-color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .blog h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .blog p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  .blog-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .blog-container h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .blog-container ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .blog-container li {
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  .blog-container li:hover {
+    background-color: #f5f5f5;
+  }
+  
+  .blog-container li h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .blog-container li p {
+    color: #888;
+    margin-bottom: 10px;
+  }
+  
+  .blog-container li a {
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .blog-container li a:hover {
+    text-decoration: underline;
+  }
+  
+  .pagination {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #eee;
+    color: #333;
+    cursor: pointer;
+  }
+  
+  .pagination button:hover {
+    background-color: #ddd;
+  }
+  
