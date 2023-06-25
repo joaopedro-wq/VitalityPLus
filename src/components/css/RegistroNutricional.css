@@ -1,0 +1,74 @@
+.registro-nutricional-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f5f5f5;
+  border-radius: 5px;
+}
+
+.registro-nutricional-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.registro-nutricional-container form {
+  margin-bottom: 20px;
+}
+
+.registro-nutricional-container label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.registro-nutricional-container input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.registro-nutricional-container button {
+  padding: 10px 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  background-color: #41a050;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.registro-nutricional-container button:not(:last-child) {
+  margin-right: 10px;
+}
+
+.registro-nutricional-container button:hover {
+  background-color: #41b853;
+}
+
+.registro-nutricional-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.registro-nutricional-container li {
+  margin-bottom: 20px;
+}
+
+.registro-nutricional-container h4 {
+  margin-bottom: 10px;
+}
+
+.registro-nutricional-container p {
+  margin-bottom: 5px;
+}
+
+.registro-nutricional-container span {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.registro-nutricional-container div {
+  margin-bottom: 10px;
+}
