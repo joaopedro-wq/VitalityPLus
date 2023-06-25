@@ -4,15 +4,17 @@ import { Link } from 'react-router-dom';
 function HomePage() {
   return (
     <div>
-      <section id="banner" className="banner section">
-        <h1>Bem-vindo à plataforma de saúde e bem-estar!</h1>
-        <p>Aqui você encontra tudo o que precisa para cuidar da sua saúde de forma personalizada.</p>
-        <a href="#" className="cta-button">Comece Agora</a>
-      </section>
+    
+    <section id="banner" className="banner section">
+  <h1>Bem-vindo à plataforma de saúde e bem-estar!</h1>
+  <p>Aqui você encontra tudo o que precisa para cuidar da sua saúde de forma personalizada.</p>
+  <a href="/about" className="cta-button">Comece Agora</a>
+</section>
 
-      <section id="about" className="about ">
+      <section id="services" className="services ">
         <h2>Sobre Nós</h2>
         <p>Algumas informações sobre a Vitality PLUS.</p>
+        <Link to="/SobreNos" className="services-button">Sobre</Link>
       </section>
 
       <section id="services" className="services">
@@ -30,6 +32,7 @@ function HomePage() {
       <section id="contact" className="contact">
         <h2>Contato</h2>
         <p>Entre em contato conosco para obter mais informações ou tirar suas dúvidas.</p>
+        <Link to="/Contato" className="services-button">Contato</Link>
       </section>
     </div>
   );

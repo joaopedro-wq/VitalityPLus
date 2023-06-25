@@ -25,7 +25,7 @@
     border-radius: 4px;
   }
   
-  .about,
+  .about1,
   .services,
   .blog,
   .contact {
@@ -34,7 +34,7 @@
     margin-bottom: 20px;
   }
   
-  .about h2,
+  .about1 h2,
   .services h2,
   .blog h2,
   .contact h2 {
@@ -42,7 +42,7 @@
     margin-bottom: 10px;
   }
   
-  .about p,
+  .about1 p,
   .services p,
   .blog p,
   .contact p {
@@ -52,7 +52,7 @@
   .services-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #521026;
+    background-color: #41a050;
     color: #fff;
     text-decoration: none;
     border: none;
@@ -62,5 +62,5 @@
   }
   
   .services-button:hover {
-    background-color: #7a1b3b;
+    background-color: #4fc461;
   }
