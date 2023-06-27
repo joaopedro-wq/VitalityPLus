@@ -1,0 +1,116 @@
+.dados-usuario {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 8px ;
+    box-shadow: 0 2px 4px rgba(161, 26, 26, 0.1);
+  }
+  
+  .titulo {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #39b94d;
+    padding: 2px;
+    color: #fff;
+  }
+  
+  .info-container {
+    margin-bottom: 20px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .user-table th,
+  .user-table td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .user-table th {
+    background-color: #f0f0f0;
+  }
+  
+  .user-table td {
+    background-color: #ffffff;
+  }
+  
+  .user-table td:nth-child(odd) {
+    background-color: #f8f8f8;
+  }
+  
+  .user-table th,
+  .user-table td:first-child {
+    border-top-left-radius: 4px;
+  }
+  
+  .user-table th,
+  .user-table td:last-child {
+    border-top-right-radius: 4px;
+  }
+  
+  .user-table td:first-child {
+    border-bottom-left-radius: 4px;
+  }
+  
+  .user-table td:last-child {
+    border-bottom-right-radius: 4px;
+  }
+  
+  .calculos-container {
+    text-align: center;
+  }
+  
+  .calcular-button {
+    padding: 10px 20px;
+    background-color: #41a050;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .calcular-button:hover {
+    background-color: #39b94d;
+  }
+  
+  .resultado {
+    margin: 10px 0;
+  }
+  
+  .categoria-imc {
+    font-weight: bold;
+  }
+  
+  @media (max-width: 480px) {
+    .dados-usuario {
+      padding: 10px;
+    }
+  
+    .titulo {
+      font-size: 20px;
+    }
+  
+    .info-container p,
+    .calculos-container p {
+      font-size: 14px;
+    }
+  
+    .calcular-button {
+      font-size: 14px;
+    }
+  }
+  

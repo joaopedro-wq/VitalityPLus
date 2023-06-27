@@ -29,11 +29,25 @@ const Cadastro = () => {
       console.log(`Preferências alimentares: ${preferencias}`);
       console.log(`Restrições alimentares: ${restricoes}`);
 
-      navigate('/dieta');
+      // Salvar os dados do usuário em algum local (ex: estado global ou serviço de armazenamento)
+      const userData = {
+        nome,
+        email,
+        senha,
+        idade,
+        altura,
+        peso,
+        preferencias,
+        restricoes,
+      };
+
+      // Redirecionar para a página de exibição de dados de IMC e cálculo basal
+      navigate(`/exibir-dados?nome=${nome}&email=${email}&idade=${idade}&altura=${altura}&peso=${peso}`);
     } else {
       setErrorMessage('Por favor, preencha todos os campos obrigatórios.');
     }
   };
+
 
   return (
     <div className="container" style={{ marginBottom: '50px' }}>
