@@ -18,6 +18,8 @@ import SobreNos from './components/pages/SobreNos';
 import Cliente from './components/pages/Cliente';
 import Cadastro from './components/pages/Cadastro';
 import Dieta from './components/pages/Dieta';
+import DadosUsuario from './components/pages/DadosUsuario';
+
 
 function App() {
 
@@ -61,6 +63,7 @@ function App() {
             <Route path="/Cliente" element={<Cliente />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/dieta" component={Dieta} />
+            <Route path="/exibir-dados" element={<DadosUsuario />} />
           </Routes>
         </main>
 
