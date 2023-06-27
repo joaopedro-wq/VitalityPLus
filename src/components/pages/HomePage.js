@@ -3,7 +3,7 @@ import '../css/HomePage.css'
 import { Link } from 'react-router-dom';
 function HomePage() {
   return (
-    <div>
+    <div style={{ marginBottom: '50px' }}>
     
     <section id="banner" className="banner section">
   <h1>Bem-vindo à plataforma de saúde e bem-estar!</h1>
@@ -29,7 +29,7 @@ function HomePage() {
         <Link to="/blog" className="services-button">Veja o Blog</Link>
       </section>
 
-      <section id="contact" className="contact">
+      <section id="contact" className="contact" >
         <h2>Contato</h2>
         <p>Entre em contato conosco para obter mais informações ou tirar suas dúvidas.</p>
         <Link to="/Contato" className="services-button">Contato</Link>

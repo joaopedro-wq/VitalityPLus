@@ -2,7 +2,7 @@ import React from 'react';
 
 function ServicesPage() {
   return (
-    <div>
+    <div style={{ marginBottom: '50px' }}>
       <h1 className='service-title'>Nossos Serviços</h1>
       <p className='service-description'>Aqui estão alguns dos serviços que oferecemos para ajudar você a alcançar uma dieta saudável e equilibrada:</p>
 
@@ -11,7 +11,7 @@ function ServicesPage() {
         <p>Crie um plano de dieta personalizado de acordo com suas necessidades e objetivos individuais. Leve em consideração fatores como idade, peso, altura, restrições alimentares e preferências pessoais.</p>
       </div>
 
-      <div className="service-card">
+      <div className="service-card"> 
         <h2>Receitas Saudáveis</h2>
         <p>Explore nossa coleção de receitas saudáveis e balanceadas. Encontre opções nutritivas e saborosas para todas as refeições, com informações nutricionais detalhadas.</p>
       </div>

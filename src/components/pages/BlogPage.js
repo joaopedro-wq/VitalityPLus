@@ -39,7 +39,7 @@ function BlogPage() {
   };
 
   return (
-    <div className="blog-container">
+    <div className="blog-container" style={{ marginBottom: '50px' }}>
       <h1>Blog</h1>
       <ul>
         {articles.map((article) => (

@@ -3,7 +3,7 @@ import '../css/SobreNos.css';
 
 function SobreNos() {
   return (
-    <div className="sobre-nos-container">
+    <div className="sobre-nos-container" style={{ marginBottom: '50px' }}>
       <h2 className="titulo">Sobre Nós</h2>
       <p className="descricao">
         Bem-vindo à nossa plataforma! Estamos aqui para fornecer informações valiosas e facilitar o acesso a dados
