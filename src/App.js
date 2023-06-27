@@ -1,4 +1,4 @@
-
+import React, { useEffect } from 'react';
 import './components/css/Header.css';
 import './components/css/Footer.css';
 import './components/css/Contact.css';
@@ -6,17 +6,13 @@ import './components/css/About.css';
 import './components/css/Banner.css';
 import './components/css//Services.css';
 import './components/css/Blog.css';
-
-import React, { useEffect } from 'react';
-
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import HomePage from './components/pages/Homepage.js';
+import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import ServicesPage from './components/pages/ServicesPage';
 import BlogPage from './components/pages/BlogPage.js';
 import RegistroNutricional from './components/pages/RegistroNutricional';
-import testUSDAFoodAPI from './components/pages/TestUSDAFoodAPI';
 import Alimento from './components/pages/Alimento';
 import SobreNos from './components/pages/SobreNos';
 import Cliente from './components/pages/Cliente';

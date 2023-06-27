@@ -42,7 +42,7 @@ function Alimentos() {
   };
   
   return (
-    <div className="alimentos-container">
+    <div className="alimentos-container" style={{ marginBottom: '50px' }}> 
       <h2>Alimentos</h2>
       <div className="filtro-container">
   <label htmlFor="filtro">Filtrar alimentos:</label>

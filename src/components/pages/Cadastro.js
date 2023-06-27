@@ -36,7 +36,7 @@ const Cadastro = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" style={{ marginBottom: '50px' }}>
       <h1 className="title">Cadastro</h1>
       <form onSubmit={handleSubmit}>
         <label className="form-label">
