@@ -36,7 +36,7 @@ function ServicesPage() {
         <p>Junte-se à nossa comunidade online de pessoas que compartilham o objetivo de uma vida saudável. Compartilhe experiências, receitas e dê apoio uns aos outros.</p>
       </div>
 
-      <div className="service-card">
+      <div className="service-card" style={{ marginBottom: '50px' }}>
         <h2>Acompanhamento de Progresso</h2>
         <p>Avalie seu progresso com ferramentas de acompanhamento. Acompanhe seu peso, medidas corporais e conquistas alcançadas ao longo do tempo.</p>
       </div>

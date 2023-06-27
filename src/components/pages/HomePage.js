@@ -29,7 +29,7 @@ function HomePage() {
         <Link to="/blog" className="services-button">Veja o Blog</Link>
       </section>
 
-      <section id="contact" className="contact">
+      <section id="contact" className="contact" style={{ marginBottom: '50px' }} > 
         <h2>Contato</h2>
         <p>Entre em contato conosco para obter mais informações ou tirar suas dúvidas.</p>
         <Link to="/Contato" className="services-button">Contato</Link>

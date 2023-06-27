@@ -105,7 +105,7 @@ function RegistroNutricional() {
   };
 
   return (
-    <div className="registro-nutricional-container">
+    <div className="registro-nutricional-container" style={{ marginBottom: '50px' }}>
       <h2>Registro Nutricional</h2>
       <form onSubmit={handleSubmit}>
         <div className="input-container">
