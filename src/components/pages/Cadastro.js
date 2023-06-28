@@ -9,16 +9,16 @@ const Cadastro = () => {
   const [idade, setIdade] = useState('');
   const [altura, setAltura] = useState('');
   const [peso, setPeso] = useState('');
-  const [preferencias, setPreferencias] = useState('');
-  const [restricoes, setRestricoes] = useState('');
+
   const [errorMessage, setErrorMessage] = useState('');
   const [atividade, setAtividade] = useState ('');
+  const [sexo, setSexo] = useState ('');
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    if (nome && email && senha && idade && altura && peso && preferencias) {
+    if (nome && email && senha && idade && altura && peso && sexo) {
       console.log('Dados do usuário:');
       console.log(`Nome: ${nome}`);
       console.log(`Email: ${email}`);
@@ -26,9 +26,8 @@ const Cadastro = () => {
       console.log(`Idade: ${idade}`);
       console.log(`Altura: ${altura}`);
       console.log(`Peso: ${peso}`);
-      console.log(`Preferências alimentares: ${preferencias}`);
-      console.log(`Restrições alimentares: ${restricoes}`);
       console.log(`Atividade física: ${atividade}`);
+      console.log (`Sexo: ${sexo}` );
       // Salvar os dados do usuário em algum local (ex: estado global ou serviço de armazenamento)
       const userData = {
         nome,
@@ -37,14 +36,13 @@ const Cadastro = () => {
         idade,
         altura,
         peso,
-        preferencias,
-        restricoes,
         atividade,
+        sexo,
         
       };
 
       // Redirecionar para a página de exibição de dados de IMC e cálculo basal
-      navigate(`/exibir-dados?nome=${nome}&email=${email}&idade=${idade}&altura=${altura}&peso=${peso}&atividade=${atividade}`);
+      navigate(`/exibir-dados?nome=${nome}&email=${email}&idade=${idade}&altura=${altura}&peso=${peso}&atividade=${atividade}&sexo=${sexo}`);
 
     } else {
       setErrorMessage('Por favor, preencha todos os campos obrigatórios.');
@@ -129,24 +127,21 @@ const Cadastro = () => {
           <option value="muito-ativo">Muito Ativo</option>
           <option value="extremamente-ativo">Extremamente Ativo</option>
         </select>
+        <label className="form-label">
+  Sexo:
+  <select
+    value={sexo}
+    onChange={(event) => setSexo(event.target.value)}
+    required
+    className="form-input"
+  >
+    <option value="">Selecione</option>
+    <option value="masculino">Masculino</option>
+    <option value="feminino">Feminino</option>
+  </select>
+</label>
 
-        <label className="form-label">
-          Preferências Alimentares:
-          <textarea
-            value={preferencias}
-            onChange={(event) => setPreferencias(event.target.value)}
-            required
-            className="form-textarea"
-          ></textarea>
-        </label>
-        <label className="form-label">
-          Restrições Alimentares:
-          <textarea
-            value={restricoes}
-            onChange={(event) => setRestricoes(event.target.value)}
-            className="form-textarea"
-          ></textarea>
-        </label>
+        
         <button type="submit" className="submit-button">Cadastrar</button>
         {errorMessage && <p className="error-message">{errorMessage}</p>}
       </form>

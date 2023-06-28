@@ -13,59 +13,67 @@ const DadosUsuario = () => {
   const altura = parseInt(params.get('altura'));
   const peso = parseInt(params.get('peso'));
   const atividade = params.get('atividade'); // Nível de atividade física
-
+  const sexo = params.get('sexo');
   const [imc, setIMC] = useState(0);
   const [mb, setMB] = useState(0);
   const [imcCategoria, setImcCategoria] = useState('');
+
+  // Mapear valores e categorias do IMC
+  const imcCategorias = [
+    { categoria: 'Abaixo do Peso', limite: 18.5 },
+    { categoria: 'Peso Normal', limite: 25 },
+    { categoria: 'Sobrepeso', limite: 30 },
+    { categoria: 'Obesidade Grau I', limite: 35 },
+    { categoria: 'Obesidade Grau II', limite: 40 },
+    { categoria: 'Obesidade Grau III', limite: Infinity },
+  ];
+
+  // Mapear valores e fatores de atividade física
+  const fatoresAtividade = {
+    'sedentario': 1.2,
+    'pouco-ativo': 1.375,
+    'moderadamente-ativo': 1.55,
+    'muito-ativo': 1.725,
+    'extremamente-ativo': 1.9,
+  };
+
   // Cálculo do IMC
   const calcularIMC = () => {
     const alturaMetros = altura / 100; // Converter altura para metros
     const imcCalculado = peso / (alturaMetros * alturaMetros);
     setIMC(imcCalculado);
-    definirCategoriaIMC(imcCalculado); 
+    definirCategoriaIMC(imcCalculado);
   };
-// Definir a categoria do IMC
-const definirCategoriaIMC = (imc) => {
-  if (imc < 18.5) {
-    setImcCategoria('Abaixo do Peso');
-  } else if (imc >= 18.5 && imc < 25) {
-    setImcCategoria('Peso Normal');
-  } else if (imc >= 25 && imc < 30) {
-    setImcCategoria('Sobrepeso');
-  } else if (imc >= 30 && imc < 35) {
-    setImcCategoria('Obesidade Grau I');
-  } else if (imc >= 35 && imc < 40) {
-    setImcCategoria('Obesidade Grau II');
-  } else {
-    setImcCategoria('Obesidade Grau III');
-  }
-};
+
+  // Definir a categoria do IMC
+  const definirCategoriaIMC = (imc) => {
+    const categoria = imcCategorias.find((item) => imc < item.limite);
+    if (categoria) {
+      setImcCategoria(categoria.categoria);
+    }
+  };
+
   // Cálculo do MB com base no nível de atividade física
   const calcularMB = () => {
     let mbCalculado = 0;
 
-    // Calcular fator de atividade com base na categoria selecionada
-    let fatorAtividade = 1.2; // Sedentário (padrão)
+    // Obter o fator de atividade com base no nível selecionado
+    const fatorAtividade = fatoresAtividade[atividade] || 1.2;
 
-    if (atividade === 'pouco-ativo') {
-      fatorAtividade = 1.375;
-    } else if (atividade === 'moderadamente-ativo') {
-      fatorAtividade = 1.55;
-    } else if (atividade === 'muito-ativo') {
-      fatorAtividade = 1.725;
-    } else if (atividade === 'extremamente-ativo') {
-      fatorAtividade = 1.9;
+    // Calcular o metabolismo basal com base na fórmula de Harris-Benedict
+    if (sexo === 'masculino') {
+      mbCalculado = 88.362 + 13.397 * peso + 4.799 * altura - 5.677 * idade;
+    } else if (sexo === 'feminino') {
+      mbCalculado = 447.593 + 9.247 * peso + 3.098 * altura - 4.330 * idade;
     }
 
-    // Calcular o metabolismo basal com base no fator de atividade
-    mbCalculado = 88.362 + 13.397 * peso + 4.799 * altura - 5.677 * idade;
-    mbCalculado *= fatorAtividade;
+    //mbCalculado *= fatorAtividade;
 
     setMB(mbCalculado);
   };
 
   return (
-    <div className="dados-usuario">
+    <div className="dados-usuario" style={{ marginBottom: '50px' }}>
       <h1 className="titulo">Dados do Usuário</h1>
       <div className="info-container">
         <table className="user-table">
@@ -93,6 +101,10 @@ const definirCategoriaIMC = (imc) => {
             <tr>
               <th>Atividade Física:</th>
               <td>{atividade}</td>
+            </tr>
+            <tr>
+              <th>Sexo:</th>
+              <td>{sexo}</td>
             </tr>
           </tbody>
         </table>
