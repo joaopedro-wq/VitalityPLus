@@ -11,9 +11,9 @@
     text-align: center;
     font-size: 24px;
     margin-bottom: 20px;
-    border-radius: 5px;
-    background-color: #39b94d;
-    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #41a050, #033318);
+    padding: 15px;
     color: #fff;
   }
   
