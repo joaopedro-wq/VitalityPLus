@@ -12,7 +12,7 @@ const Cadastro = () => {
   const [preferencias, setPreferencias] = useState('');
   const [restricoes, setRestricoes] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
-
+  const [atividade, setAtividade] = useState ('');
   const navigate = useNavigate();
 
   const handleSubmit = (event) => {
@@ -28,7 +28,7 @@ const Cadastro = () => {
       console.log(`Peso: ${peso}`);
       console.log(`Preferências alimentares: ${preferencias}`);
       console.log(`Restrições alimentares: ${restricoes}`);
-
+      console.log(`Atividade física: ${atividade}`);
       // Salvar os dados do usuário em algum local (ex: estado global ou serviço de armazenamento)
       const userData = {
         nome,
@@ -39,10 +39,13 @@ const Cadastro = () => {
         peso,
         preferencias,
         restricoes,
+        atividade,
+        
       };
 
       // Redirecionar para a página de exibição de dados de IMC e cálculo basal
-      navigate(`/exibir-dados?nome=${nome}&email=${email}&idade=${idade}&altura=${altura}&peso=${peso}`);
+      navigate(`/exibir-dados?nome=${nome}&email=${email}&idade=${idade}&altura=${altura}&peso=${peso}&atividade=${atividade}`);
+
     } else {
       setErrorMessage('Por favor, preencha todos os campos obrigatórios.');
     }
@@ -113,6 +116,20 @@ const Cadastro = () => {
             className="form-input"
           />
         </label>
+        <label htmlFor="atividade">Categoria de Atividade Física:</label>
+        <select
+          id="atividade"
+          name="atividade"
+          value={atividade}
+          onChange={(event) => setAtividade(event.target.value)}
+        >
+          <option value="sedentario">Sedentário</option>
+          <option value="pouco-ativo">Pouco Ativo</option>
+          <option value="moderadamente-ativo">Moderadamente Ativo</option>
+          <option value="muito-ativo">Muito Ativo</option>
+          <option value="extremamente-ativo">Extremamente Ativo</option>
+        </select>
+
         <label className="form-label">
           Preferências Alimentares:
           <textarea

@@ -9,9 +9,10 @@ const DadosUsuario = () => {
   // Recuperar os dados da URL
   const nome = params.get('nome');
   const email = params.get('email');
-  const idade = params.get('idade');
-  const altura = params.get('altura');
-  const peso = params.get('peso');
+  const idade = parseInt(params.get('idade'));
+  const altura = parseInt(params.get('altura'));
+  const peso = parseInt(params.get('peso'));
+  const atividade = params.get('atividade'); // Nível de atividade física
 
   const [imc, setIMC] = useState(0);
   const [mb, setMB] = useState(0);
@@ -23,14 +24,8 @@ const DadosUsuario = () => {
     setIMC(imcCalculado);
     definirCategoriaIMC(imcCalculado); 
   };
-
-  // Cálculo do MB
-  const calcularMB = () => {
-    const mbCalculado = 88.362 + 13.397 * peso + 4.799 * altura - 5.677 * idade;
-    setMB(mbCalculado);
-  };
- // Definir a categoria do IMC
- const definirCategoriaIMC = (imc) => {
+// Definir a categoria do IMC
+const definirCategoriaIMC = (imc) => {
   if (imc < 18.5) {
     setImcCategoria('Abaixo do Peso');
   } else if (imc >= 18.5 && imc < 25) {
@@ -45,36 +40,63 @@ const DadosUsuario = () => {
     setImcCategoria('Obesidade Grau III');
   }
 };
+  // Cálculo do MB com base no nível de atividade física
+  const calcularMB = () => {
+    let mbCalculado = 0;
+
+    // Calcular fator de atividade com base na categoria selecionada
+    let fatorAtividade = 1.2; // Sedentário (padrão)
+
+    if (atividade === 'pouco-ativo') {
+      fatorAtividade = 1.375;
+    } else if (atividade === 'moderadamente-ativo') {
+      fatorAtividade = 1.55;
+    } else if (atividade === 'muito-ativo') {
+      fatorAtividade = 1.725;
+    } else if (atividade === 'extremamente-ativo') {
+      fatorAtividade = 1.9;
+    }
+
+    // Calcular o metabolismo basal com base no fator de atividade
+    mbCalculado = 88.362 + 13.397 * peso + 4.799 * altura - 5.677 * idade;
+    mbCalculado *= fatorAtividade;
+
+    setMB(mbCalculado);
+  };
+
   return (
     <div className="dados-usuario">
       <h1 className="titulo">Dados do Usuário</h1>
       <div className="info-container">
-  <table className="user-table">
-    <tbody>
-      <tr>
-        <th>Nome:</th>
-        <td>{nome}</td>
-      </tr>
-      <tr>
-        <th>Email:</th>
-        <td>{email}</td>
-      </tr>
-      <tr>
-        <th>Idade:</th>
-        <td>{idade}</td>
-      </tr>
-      <tr>
-        <th>Altura:</th>
-        <td>{altura}</td>
-      </tr>
-      <tr>
-        <th>Peso:</th>
-        <td>{peso}</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
-
+        <table className="user-table">
+          <tbody>
+            <tr>
+              <th>Nome:</th>
+              <td>{nome}</td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td>{email}</td>
+            </tr>
+            <tr>
+              <th>Idade:</th>
+              <td>{idade}</td>
+            </tr>
+            <tr>
+              <th>Altura:</th>
+              <td>{altura}</td>
+            </tr>
+            <tr>
+              <th>Peso:</th>
+              <td>{peso}</td>
+            </tr>
+            <tr>
+              <th>Atividade Física:</th>
+              <td>{atividade}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <div className="calculos-container">
         <button className="calcular-button" onClick={calcularIMC}>
@@ -84,7 +106,6 @@ const DadosUsuario = () => {
           <strong>IMC:</strong> {imc.toFixed(2)}
         </p>
         <p>Categoria do IMC: {imcCategoria}</p>
-
         <button className="calcular-button" onClick={calcularMB}>
           Calcular MB
         </button>
