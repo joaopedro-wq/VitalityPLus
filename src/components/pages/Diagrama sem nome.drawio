@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-04T19:40:29.436Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="ywlRuRTFjldX7IB7BLSx" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-04T19:41:15.399Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="59HbUkuntVBEcfrfFTpP" version="21.5.2" type="github">
   <diagram name="Página-1" id="-aCscPGjMUDcG00FSvme">
     <mxGraphModel dx="1434" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -82,14 +82,20 @@
         <mxCell id="FosLZs8mTLWsPHXDbrrZ-29" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Decisão: FORA do peso ideal&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="200" y="360" width="120" height="70" as="geometry" />
         </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FosLZs8mTLWsPHXDbrrZ-31" target="FosLZs8mTLWsPHXDbrrZ-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="FosLZs8mTLWsPHXDbrrZ-31" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Recomendações para perda de peso&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
           <mxGeometry x="195" y="510" width="130" height="90" as="geometry" />
         </mxCell>
-        <mxCell id="FosLZs8mTLWsPHXDbrrZ-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="FosLZs8mTLWsPHXDbrrZ-10">
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="FosLZs8mTLWsPHXDbrrZ-34" target="FosLZs8mTLWsPHXDbrrZ-10">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="330" y="540" as="sourcePoint" />
             <mxPoint x="270" y="520" as="targetPoint" />
           </mxGeometry>
+        </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-34" value="&lt;font style=&quot;font-size: 17px;&quot;&gt;Recomendações Alimentos Saudaveis&lt;/font&gt;" style="whiteSpace=wrap;html=1;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="195" y="680" width="130" height="90" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
