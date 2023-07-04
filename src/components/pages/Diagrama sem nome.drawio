@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-07-04T19:33:58.413Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="-WeNXca9yX_XBMIx0bXN" version="21.5.2" type="github">
+<mxfile host="app.diagrams.net" modified="2023-07-04T19:35:44.579Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="U7kokSj99H5mU_h7gZ6N" version="21.5.2" type="github">
   <diagram name="Página-1" id="-aCscPGjMUDcG00FSvme">
     <mxGraphModel dx="1434" dy="768" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -28,8 +28,26 @@
         <mxCell id="FosLZs8mTLWsPHXDbrrZ-8" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Decisão: Dentro do peso ideal&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="360" width="130" height="60" as="geometry" />
         </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FosLZs8mTLWsPHXDbrrZ-10" target="FosLZs8mTLWsPHXDbrrZ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
         <mxCell id="FosLZs8mTLWsPHXDbrrZ-10" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Cálculo Basal&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="600" y="500" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FosLZs8mTLWsPHXDbrrZ-12" target="FosLZs8mTLWsPHXDbrrZ-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-12" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Tabela com valores Nutricionais&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="592.5" y="640" width="145" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="FosLZs8mTLWsPHXDbrrZ-14" target="FosLZs8mTLWsPHXDbrrZ-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-14" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Inserção de Alimentos&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="592.5" y="810" width="137.5" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="FosLZs8mTLWsPHXDbrrZ-16" value="&lt;div style=&quot;text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 17px;&quot;&gt;Valores Nutricionais dos alimentos&lt;/font&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="590" y="940" width="140" height="80" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
