@@ -1,16 +1,46 @@
-.contact {
-    background-color: #f2f2f2;
+#contact {
+  background-color: #222;
     padding: 20px;
     text-align: center;
+    margin-top: 10px;
   }
   
-  .contact h2 {
+  #contact h2 {
     font-size: 24px;
     margin-bottom: 10px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
   }
   
-  .contact p {
+  #contact p {
     font-size: 16px;
     margin-bottom: 20px;
+    font-family: 'Ubuntu', sans-serif;
   }
-  
+  #contact .cta-button {
+
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #2c2a2a;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #contact .cta-button:hover {
+    background-color: #393737;
+  }
+
+  @media screen and (max-width: 600px) {
+
+
+    #contact .cta-button {
+      padding: 8px 16px; 
+      font-size: 14px; 
+    }
+  }

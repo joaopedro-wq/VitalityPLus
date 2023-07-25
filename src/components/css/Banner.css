@@ -21,11 +21,18 @@
   color: #fff;
   font-size: 16px;
   padding: 12px 24px;
-  border-radius: 5px;
+  border-radius: 10px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  margin-top: 15px;
 }
 
 #banner .cta-button:hover {
   background-color: #3e8d51;
+}
+@media screen and (max-width: 600px) {
+  #banner .cta-button {
+    padding: 8px 16px; 
+    font-size: 14px; 
+  }
 }
