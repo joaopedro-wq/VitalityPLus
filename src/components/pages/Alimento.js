@@ -42,7 +42,11 @@ function Alimentos() {
   };
   
   return (
+<<<<<<< HEAD
     <div className="alimentos-container" style={{ marginBottom: '50px' }}>
+=======
+    <div className="alimentos-container" style={{ marginBottom: '50px' }}> 
+>>>>>>> origin/main
       <h2>Alimentos</h2>
       <div className="filtro-container">
   <label htmlFor="filtro">Filtrar alimentos:</label>

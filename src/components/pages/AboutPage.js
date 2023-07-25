@@ -20,7 +20,7 @@ const AboutPage = () => {
   };
 
   return (
-    <div className="about-page">
+    <div className="about-page" style={{ marginBottom: '50px' }}>
       <h1 className="title">Bem-vindo à plataforma de saúde e bem-estar!</h1>
       <p className="description">Aqui você encontra tudo o que precisa para cuidar da sua saúde de forma personalizada.</p>
       <div className="section">

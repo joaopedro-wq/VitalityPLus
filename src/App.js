@@ -1,4 +1,7 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/main
 import React, { useEffect } from 'react';
 import './components/css/Header.css';
 import './components/css/Footer.css';
@@ -8,6 +11,10 @@ import './components/css/Banner.css';
 import './components/css//Services.css';
 import './components/css/Blog.css';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+<<<<<<< HEAD
+=======
+import HomePage from './components/pages/HomePage';
+>>>>>>> origin/main
 import AboutPage from './components/pages/AboutPage';
 import HomePage from './components/pages/HomePage';
 import ContactPage from './components/pages/ContactPage';
@@ -19,6 +26,8 @@ import SobreNos from './components/pages/SobreNos';
 import Cliente from './components/pages/Cliente';
 import Cadastro from './components/pages/Cadastro';
 import Dieta from './components/pages/Dieta';
+import DadosUsuario from './components/pages/DadosUsuario';
+
 
 function App() {
 
@@ -62,6 +71,7 @@ function App() {
             <Route path="/Cliente" element={<Cliente />} />
             <Route path="/cadastro" element={<Cadastro />} />
             <Route path="/dieta" component={Dieta} />
+            <Route path="/exibir-dados" element={<DadosUsuario />} />
           </Routes>
         </main>
 

@@ -38,7 +38,7 @@ const Dieta = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{ marginBottom: '50px' }}>
       <h1>Minha Dieta</h1>
 
       <h2>Plano de Refeições</h2>
