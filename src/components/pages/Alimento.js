@@ -1,94 +1,43 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import '../css/Alimento.css';
-import axios from 'axios';
 import { useTranslation } from 'react-i18next';
+
+import alimentosData from '../../services/taco.json';
 
 function Alimentos() {
   const { t } = useTranslation();
-  const [alimentos, setAlimentos] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [filtro, setFiltro] = useState('');
-  const [categoriaFiltro, setCategoriaFiltro] = useState('');
-
-  useEffect(() => {
-    const obterAlimentos = async () => {
-      try {
-        const response = await axios.get('https://api.nal.usda.gov/fdc/v1/foods/search', {
-          params: {
-            api_key: 'ZJyGJgT85ZT13ebeaHwrWnDJ6U4IcfhQyIbiI2tf',
-            query: filtro,
-            pageSize: 100,
-            dataType: 'Branded',
-            category: categoriaFiltro
-          },
-        });
-        
-
-        setAlimentos(response.data.foods);
-    setLoading(false);
-  } catch (error) {
-    console.error(error);
-  }
-};
-
-    obterAlimentos();
-  }, [filtro]);
-
-  const handleFiltroChange = (e) => {
-    setFiltro(e.target.value);
-  };
-  const handleCategoriaFiltroChange = (e) => {
-    setCategoriaFiltro(e.target.value);
-  };
-  
+  const [alimentos, setAlimentos] = useState(alimentosData);
+  const loading = false; 
   return (
-    <div className="alimentos-container" style={{ marginBottom: '50px' }}> 
+    <div className="alimentos-container" style={{ marginBottom: '50px' }}>
       <h2>Alimentos</h2>
-      <div className="filtro-container">
-  <label htmlFor="filtro">Filtrar alimentos:</label>
-  <input type="text" id="filtro" value={filtro} onChange={handleFiltroChange} />
-  <label htmlFor="categoriaFiltro">Categoria:</label>
-  <select id="categoriaFiltro" value={categoriaFiltro} onChange={handleCategoriaFiltroChange}>
-    <option value="">Todas as categorias</option>
-    <option value="Dairy and Egg Products">Produtos lácteos e ovos</option>
-    <option value="Fast Foods">Fast foods</option>
-  
-  </select>
-</div>
-
-      
+      <p>Unidade: 100(g)</p>
+      {/* Seu código de filtro e pesquisa aqui */}
       {loading ? (
         <p>Carregando alimentos...</p>
       ) : (
         <table className="alimentos-table">
           <thead>
             <tr>
+             <th>Grupo</th>
               <th>Nome</th>
               <th>Calorias</th>
               <th>Proteínas</th>
               <th>Carboidratos</th>
               <th>Gorduras</th>
+              <th>Fibra Alimentar </th>
             </tr>
           </thead>
           <tbody>
             {alimentos.map((alimento) => (
-              <tr key={alimento.fdcId}>
-                <td>{alimento.description}</td>
-                <td>
-                  {alimento.foodNutrients.find((nutriente) => nutriente.nutrientName === 'Energy')?.value || '-'}
-                </td>
-                <td>
-                  {alimento.foodNutrients.find((nutriente) => nutriente.nutrientName === 'Protein')?.value || '-'}
-                </td>
-                <td>
-                  {alimento.foodNutrients.find(
-                    (nutriente) => nutriente.nutrientName === 'Carbohydrate, by difference'
-                  )?.value || '-'}
-                </td>
-                <td>
-                  {alimento.foodNutrients.find((nutriente) => nutriente.nutrientName === 'Total lipid (fat)')?.value ||
-                    '-'}
-                </td>
+              <tr key={alimento['Número']}>
+                <td>{alimento['Grupo']}</td>
+                <td>{alimento['Descrição do Alimento']}</td>
+                <td>{alimento['Energia(kcal)']}</td>
+                <td>{alimento['Proteína(g)']}</td>
+                <td>{alimento['Carboidrato(g)']}</td>
+                <td>{alimento['Lipídeos(g)']}</td>
+                <td>{alimento['Fibra Alimentar(g)']}</td>
               </tr>
             ))}
           </tbody>

@@ -9,6 +9,11 @@ h2 {
   margin-bottom: 20px;
 }
 
+p{
+  text-align: center;
+}
+
+
 .filtro-container {
   display: flex;
   justify-content: space-between;
