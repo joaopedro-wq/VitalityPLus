@@ -1,12 +1,12 @@
 import React, { useState } from 'react';
 import '../css/Alimento.css';
-import { useTranslation } from 'react-i18next';
+
 
 import alimentosData from '../../services/taco.json';
 
 function Alimentos() {
-  const { t } = useTranslation();
-  const [alimentos, setAlimentos] = useState(alimentosData);
+ 
+  const [alimentos] = useState(alimentosData);
   const loading = false; 
   return (
     <div className="alimentos-container" style={{ marginBottom: '50px' }}>
