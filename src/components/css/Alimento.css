@@ -75,6 +75,17 @@ select {
   border: 1px solid #e7e6e0;
 }
 
+.cabecalho{
+
+text-align: center;
+
+
+}
+.alinhar{
+  text-align: right;
+
+}
+
 .alimentos-table th {
   background-color: #f4f4f4;
   font-weight: bold;

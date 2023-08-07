@@ -72,12 +72,12 @@ function Alimentos() {
         <table className="alimentos-table">
           <thead>
             <tr>
-              <th>Nome</th>
-              <th>Calorias</th>
-              <th>Proteínas</th>
-              <th>Carboidratos</th>
-              <th>Gorduras</th>
-              <th>Fibra Alimentar </th>
+              <th className='cabecalho'>Nome</th>
+              <th className='cabecalho'>Calorias</th>
+              <th className='cabecalho'>Proteínas</th>
+              <th className='cabecalho'>Carboidratos</th>
+              <th className='cabecalho'>Gorduras</th>
+              <th className='cabecalho'>Fibra Alimentar </th>
             </tr>
           </thead>
           <tbody>
@@ -85,11 +85,11 @@ function Alimentos() {
               <tr key={alimento['Número']}>
                 
                 <td>{alimento['Descrição do Alimento']}</td>
-                <td>{alimento['Energia(kcal)']}</td>
-                <td>{alimento['Proteína(g)']}</td>
-                <td>{alimento['Carboidrato(g)']}</td>
-                <td>{alimento['Lipídeos(g)']}</td>
-                <td>{alimento['Fibra Alimentar(g)']}</td>
+                <td className='alinhar' >{alimento['Energia(kcal)']}</td>
+                <td className='alinhar'>{alimento['Proteína(g)']}</td>
+                <td className='alinhar'>{alimento['Carboidrato(g)']}</td>
+                <td className='alinhar'>{alimento['Lipídeos(g)']}</td>
+                <td className='alinhar'>{alimento['Fibra Alimentar(g)']}</td>
               </tr>
             ))}
           </tbody>

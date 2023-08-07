@@ -45,7 +45,7 @@ function App() {
      
         <header>
         <div className="logo-container">
-        <img src={require('./OficialLogo1.png')} alt="Vitality Plus Logo" className="logo" width="150" height="auto" />
+        <img src={require('./Layer 2.png')} alt="Vitality Plus Logo" className="logo" width="120" height="auto" />
 
         </div>
           <nav>

@@ -48,7 +48,17 @@ nav li a {
 @media (max-width: 768px) {
   header {
     flex-direction: column;
-    padding: 15px;
-  
+    padding: 5px;
+    min-height: 120px; 
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    gap: 10px; 
+  }
+
+  nav li a{
+    font-size: 12px;
   }
 }
