@@ -13,13 +13,36 @@ p{
   text-align: center;
 }
 
-
-.filtro-container {
+.filter-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  gap: 20px;
+  margin-bottom: 20px;
 }
+
+.search-container input[type="text"] {
+  padding: 8px;
+  border: 1px solid #c4b5b5;
+  border-radius: 5px;
+  width: 100%;
+  max-width: 300px;
+  transition: background-color 0.3s;
+ 
+}
+.search-container input[type="text"]:focus{
+  background-color: #dcddc6;
+}
+
+.group-filter select {
+  padding: 8px;
+  border: 1px solid #c4b5b5;
+  border-radius: 5px;
+  background-color: #ccc(148, 39, 39);
+  cursor: pointer;
+  margin-left: 70%;
+  outline: none;
+}
+
 
 label {
   font-weight: bold;
@@ -34,25 +57,29 @@ select {
 }
 
 select {
+  margin-top: 5px;
   margin-left: 5px;
 }
 
 .alimentos-table {
   width: 100%;
   border-collapse: collapse;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  background-color: #f4f4f4;
 }
 
 .alimentos-table th,
 .alimentos-table td {
-  padding: 8px;
-  text-align: left;
-  border-bottom: 1px solid #ccc;
+  padding: 10px;
+  border: 1px solid #e7e6e0;
 }
 
 .alimentos-table th {
-  background-color: #f2f2f2;
+  background-color: #f4f4f4;
+  font-weight: bold;
 }
 
-.alimentos-table tbody tr:hover {
-  background-color: #f9f9f9;
+.alimentos-table tbody tr:nth-child(even) {
+  background-color: #e2e0d8;
 }
