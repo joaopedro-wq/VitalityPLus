@@ -49,7 +49,7 @@ function HomePage() {
       <section id="services" className="services">
       <h2><RiHeart2Line /> Serviços</h2>
         <p>Explore uma variedade de serviços personalizados para alcançar seus objetivos de saúde.</p>
-        <Link to="/services" className="services-button">Veja nossos serviços</Link>
+        <Link to="/servicespage" className="services-button">Veja nossos serviços</Link>
       </section>
 
       <section id="banner" className="banner section ">

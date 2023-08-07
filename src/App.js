@@ -20,10 +20,10 @@ import Cliente from './components/pages/Cliente';
 import Cadastro from './components/pages/Cadastro';
 import Dieta from './components/pages/Dieta';
 import DadosUsuario from './components/pages/DadosUsuario';
-import { FaBars } from 'react-icons/fa';
+
 
 function App() {
-  const [isOpen, setIsOpen] = useState(false);
+ 
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
   useEffect(() => {
@@ -45,18 +45,14 @@ function App() {
      
         <header>
         <div className="logo-container">
-        <img src={require('./OficialLogo1.png')} alt="Vitality Plus Logo" className="logo" width="180" height="auto" />
+        <img src={require('./OficialLogo1.png')} alt="Vitality Plus Logo" className="logo" width="150" height="auto" />
 
         </div>
           <nav>
-          {windowWidth <= 768 && (
-          <button className={`menu-button ${isOpen ? 'open' : ''}`} onClick={() => setIsOpen(!isOpen)}>
-            <FaBars className="menu-icon" />
-        </button>
-         )}
-        <ul className={isOpen ? 'open' : ''}>
+         
+        <ul >
               <li><a href="/">Home</a></li>
-              <li><a href="/Cliente">Clientes</a></li>
+              <li><a href="/cadastro">Clientes</a></li>
               <li><a href="/Alimento">Alimentos</a></li>
               <li><a href="/RegistroNutricional">Registro Nutricional</a></li>
               <li><a href="/blogpage">Blog</a></li>

@@ -69,11 +69,25 @@ padding: 80px;
     margin: 0 auto; 
   }
 
-  @media screen and (max-width: 600px) {
-    .services-button {
-      padding: 6px 12px; 
-      font-size: 14px; 
+  @media (max-width: 768px) {
+    .services {
+      padding: 40px;
     }
   
-    
+    .about1 h2,
+    .services h2,
+    .blog h2 {
+      font-size: 30px;
+    }
+  
+    .about1 p,
+    .services p,
+    .blog p,
+    .contact p {
+      font-size: 16px;
+    }
+  
+    .services-button {
+      font-size: 14px;
+    }
   }

@@ -9,4 +9,14 @@ footer {
   text-align: center;
   font-size: 14px;
   z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  footer {
+    flex-direction: column;
+    padding: 15px;
+  }
 }

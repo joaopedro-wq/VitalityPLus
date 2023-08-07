@@ -1,85 +1,54 @@
 header {
   background: linear-gradient(to right, #41a050, #033318);
-    padding: 35px;
-    height: 100px;
-    display: flex;
-    align-items: center;
-    
-  }
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; 
+  min-height: 80px;  
   
-  nav {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-  }
-  
- 
-
-  nav ul {
-    list-style: none;
-    display: flex;
-    
-    align-items: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  nav li {
-    margin-right: 20px;
-    
-  }
-  
-  nav li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 7px;
-    border-radius: 10px;
-    transition: background-color 0.3s ease;
-  }
-  
-  nav li a:hover {
-    background-color: #4ca66b;
-  }
+}
 
 
-  .menu-button {
-    background-color: transparent;
-    border: none;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
-  }
-  
-  .menu-button:hover {
-    text-decoration: underline;
-  }
-  
-  
-  .menu-button.open {
-    text-decoration: none;
-  }
-  
- 
-  .menu-icon {
-    font-size: 24px;
-    margin-right: 5px;
-  }
 
-  @media screen and (max-width: 768px) {
-    nav ul.open {
-      flex-direction: column;
-      align-items: flex-start;
-      display: flex;
-    }
-  
-    nav li {
-      margin: 5px 0;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  gap: 25px;
+}
 
-    }
+nav li {
+  margin: 10px 0;
+}
+
+nav li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 3px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.menu-button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.menu-button:hover {
+  text-decoration: underline;
+}
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    padding: 15px;
   
-    .menu-button {
-      display: block;
-      cursor: pointer;
-    }
   }
+}
