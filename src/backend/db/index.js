@@ -1,11 +1,12 @@
-const { Pool } = require('pg');
+const mysql = require('mysql2/promise');
 
-const pool = new Pool({
-  user: 'postgres',
-  host: 'localhost',
-  database: 'vitality_plus',
-  password: 'tccvitalityplus',
-  port: 5432,
+// Configurações da conexão com o banco de dados
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'root',
+  database: 'vplus',
 });
 
-module.exports = pool;
+// Exporte o objeto de conexão
+module.exports = connection;
