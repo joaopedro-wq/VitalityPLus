@@ -1,14 +1,23 @@
 const express = require('express');
+const cors = require('cors'); 
+
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Configurar o uso do CORS
+app.use(cors());
+
 // Importe as rotas
-const testRoutes = require('./routes/userRoutes');
+
 const alimentoRoutes = require('./routes/alimentosRoutes');
+const registroRoutes = require('./routes/registroRoutes');
+
+app.use(express.json());
 
 // Use as rotas
-app.use('/api/test', testRoutes); // Use a rota de teste em /api/test
-app.use('/api', alimentoRoutes); // Use a rota de alimentos em /api/alimentos
+app.use('/api', alimentoRoutes);
+app.use('/registro', registroRoutes); 
+
 
 // Inicie o servidor
 app.listen(PORT, () => {
