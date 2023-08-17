@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import '../css/Alimento.css';
 
-import alimentosData from '../../services/taco.json';
+import alimentosData from '../../services/taco1.json';
 
 function Alimentos() {
  
