@@ -14,7 +14,7 @@
   
   #contact p {
     font-size: 16px;
-    
+     text-align: center;
     font-family: 'Ubuntu', sans-serif;
   }
   #contact .cta-button {
