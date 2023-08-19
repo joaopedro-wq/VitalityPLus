@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '../css/RegistroNutricional.css';
 import Select from 'react-select';
-import alimentosData from '../../services/taco.json'; 
+import alimentosData from '../../services/taco1.json'; 
 import { format } from 'date-fns';
 
 function RegistroNutricional() {

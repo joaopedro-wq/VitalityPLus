@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import '../css/Alimento.css';
 
-
-import alimentosData from '../../services/taco.json';
+import alimentosData from '../../services/taco1.json';
 
 function Alimentos() {
  
@@ -10,17 +9,28 @@ function Alimentos() {
   const loading = false; 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredAlimentos, setFilteredAlimentos] = useState(alimentosData);
-  const [searchGroup, setSearchGroup] = useState('')
+  const [ searchGroup, setSearchGroup] = useState('')
   const [selectedGroup, setSelectedGroup] = useState(''); 
-  
+
   const handleSearch = (searchTerm) => {
     setSearchTerm(searchTerm);
-  
-    const filtered = alimentosData.filter(alimento =>
-      alimento['Descrição do Alimento'].toLowerCase().includes(searchTerm.toLowerCase())
+
+    if (searchTerm.trim() === '') {
+      setFilteredAlimentos(alimentosData);
+      return;
+    }
+
+    const keywords = searchTerm.toLowerCase().split(' ');
+
+    const filtered = alimentosData.filter((alimento) =>
+      keywords.every((keyword) =>
+        alimento['Descrição do Alimento'].toLowerCase().includes(keyword)
+      )
     );
+
     setFilteredAlimentos(filtered);
   };
+
 
   const handleGroupSearch = (searchGroup) => {
     setSearchGroup(searchGroup);
@@ -36,7 +46,7 @@ function Alimentos() {
   return (
     <div className="alimentos-container" style={{ marginBottom: '50px' }}>
       <h2>Alimentos</h2>
-      <p>Unidade: 100(g)</p>
+      <p>Porção por unidade: 100(g)</p>
       <div className="filter-container">
         <div className="search-container">
           <input
