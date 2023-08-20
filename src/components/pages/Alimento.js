@@ -9,7 +9,7 @@ function Alimentos() {
   const loading = false; 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredAlimentos, setFilteredAlimentos] = useState(alimentosData);
-  const [ setSearchGroup] = useState('')
+  const [ searchGroup, setSearchGroup] = useState('')
   const [selectedGroup, setSelectedGroup] = useState(''); 
 
   const handleSearch = (searchTerm) => {
