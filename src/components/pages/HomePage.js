@@ -21,18 +21,6 @@ function HomePage() {
       
       originalAlt: 'Imagem 1',
     },
-    {
-      original: image2,
-      thumbnail: image2,
-      
-      originalAlt: 'Imagem 2',
-    },
-    {
-      original: image1,
-      thumbnail: image1,
-      
-      originalAlt: 'Imagem 3',
-    },
   ];
   return (
     <div style={{ marginBottom: '45px' }}>
