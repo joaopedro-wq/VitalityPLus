@@ -51,12 +51,14 @@ function App() {
           <nav>
          
         <ul >
-              <li><a href="/">Home</a></li>
-              <li><a href="/cadastro">Clientes</a></li>
-              <li><a href="/Alimento">Alimentos</a></li>
-              <li><a href="/RegistroNutricional">Registro Nutricional</a></li>
-              <li><a href="/blogpage">Blog</a></li>
-              <li><a href="/sobreNos">Sobre</a></li>
+        <ul>
+  <li><Link to="/">Home</Link></li>
+  <li><Link to="/cadastro">Clientes</Link></li>
+  <li><Link to="/alimento">Alimentos</Link></li>
+  <li><Link to="/registroNutricional">Registro Nutricional</Link></li>
+  <li><Link to="/blogpage">Blog</Link></li>
+  <li><Link to="/sobreNos">Sobre</Link></li>
+</ul>
             </ul>
           </nav>
         </header>
