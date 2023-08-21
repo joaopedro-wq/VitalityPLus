@@ -1,9 +1,5 @@
 const express = require('express')
 
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/main
 const { resolve } = require('path')
 const app = express()
 

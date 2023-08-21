@@ -41,15 +41,11 @@ function App() {
   return (
     <Router>
       <div>
-
-     
         <header>
         <div className="logo-container">
         <img src={require('./Layer 2.png')} alt="Vitality Plus Logo" className="logo" width="120" height="auto" />
-
         </div>
           <nav>
-         
         <ul >
         <ul>
   <li><Link to="/">Home</Link></li>
