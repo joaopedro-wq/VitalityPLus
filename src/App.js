@@ -7,7 +7,7 @@ import './components/css/About.css';
 import './components/css/Banner.css';
 import './components/css//Services.css';
 import './components/css/Blog.css';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import HomePage from './components/pages/HomePage';
 import AboutPage from './components/pages/AboutPage';
 
